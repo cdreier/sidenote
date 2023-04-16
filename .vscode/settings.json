@@ -1,0 +1,5 @@
+{
+  "eslint.enable": true,
+  "prettier.enable": false,
+  "go.buildTags": "sndev"
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidenote</title>
+
+  <style>
+    @font-face {
+      font-family: 'Iosevka Slab Web';
+      font-display: swap;
+      font-weight: 400;
+      font-stretch: normal;
+      font-style: normal;
+      src: url('/fonts/iosevka-slab-regular.woff2') format('woff2'), url('/fonts/iosevka-slab-regular.ttf') format('truetype');
+    }
+
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+      font-family: Iosevka Slab Web;
+    }
+
+    div#root {
+      height: 100%;
+    }
+
+    div#version {
+      color: white;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      font-family: Iosevka Slab Web;
+      font-size: 10px;
+    }
+  </style>
+
+  <script>
+    const SERVER_CONFIG = {
+      NoAuth: "%VITE_NO_AUTH%",
+      RootURL: "%VITE_ROOT_URL%",
+      AuthConfig: {
+        AuthAuthority: "%VITE_AUTH_AUTHORITY%",
+        AuthClientID: "%VITE_AUTH_CLIENT_ID%",
+        AuthRedirectUri: "%VITE_AUTH_REDIRECT_URI%",
+        AuthPostLogoutUri: "%VITE_AUTH_POST_LOGOUT_URI%",
+      },
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
